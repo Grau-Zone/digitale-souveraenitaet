@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digitale Souveränität messbar machen</title>
+  <meta name="description" content="Digitale Souveränität in Organisationen messbar machen. Ein Forschungsprojekt, das Souveränität als Profil aus vier Fähigkeiten erfassbar, diagnostizierbar und steuerbar macht." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Animated background blobs (light source behind the glass) -->
+  <div class="bg-field" aria-hidden="true">
+    <span class="blob blob-sw"></span>
+    <span class="blob blob-int"></span>
+    <span class="blob blob-ms"></span>
+    <span class="blob blob-neg"></span>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav glass" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-mark"></span>
+      Digitale&nbsp;Souveränität
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#problem">Problem</a>
+      <a href="#ansatz">Modell</a>
+      <a href="#demo">Demo</a>
+      <a href="#survey">Survey</a>
+      <a href="#vision">Vision</a>
+      <a href="#kontakt" class="nav-cta">Mitmachen</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Forschungsprojekt · Organisationsebene</p>
+        <h1>Digitale Souveränität in Organisationen <span class="grad-text">messbar</span> machen.</h1>
+        <p class="lead">Souveränität ist kein Ja oder Nein. Sie ist ein Profil aus vier Fähigkeiten. Wir machen es messbar, diagnostizierbar und steuerbar.</p>
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">Demo erleben</a>
+          <a href="#ansatz" class="btn btn-ghost">Das Modell</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="glass radar-stage hero-radar-stage">
+          <canvas id="heroRadar" aria-label="Beispiel-Souveränitätsprofil"></canvas>
+          <span class="radar-glow"></span>
+        </div>
+      </div>
+    </div>
+    <a href="#problem" class="scroll-hint" aria-label="Weiter scrollen">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- Problem -->
+  <section class="section" id="problem">
+    <div class="container">
+      <p class="eyebrow reveal">Das Problem</p>
+      <h2 class="reveal">Jede Organisation ist abhängig. Kaum eine weiß, wie sehr.</h2>
+      <p class="section-lead reveal">Cloud, KI und Plattformen sind unverzichtbar geworden. Damit wächst die Abhängigkeit von wenigen Anbietern. Über digitale Souveränität wird viel geredet. Gemessen wird sie fast nie.</p>
+      <div class="stat-grid">
+        <div class="glass stat reveal">
+          <span class="stat-num" data-count="65" data-suffix="%">0</span>
+          <span class="stat-label">des Cloud-Markts entfallen auf nur drei Anbieter.</span>
+        </div>
+        <div class="glass stat reveal">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Fähigkeiten bestimmen, wie souverän eine Organisation handelt.</span>
+        </div>
+        <div class="glass stat reveal">
+          <span class="stat-num">Ja/Nein</span>
+          <span class="stat-label">war gestern. Souveränität ist ein Profil, kein Schalter.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ansatz: 4 Capacities -->
+  <section class="section" id="ansatz">
+    <div class="container">
+      <p class="eyebrow reveal">Der Ansatz</p>
+      <h2 class="reveal">Souveränität hat vier Fähigkeiten.</h2>
+      <p class="section-lead reveal">Statt einer einzigen Note entsteht ein Profil. Jede Fähigkeit lässt sich einzeln messen und einzeln stärken.</p>
+      <div class="cap-grid">
+        <article class="glass cap-card reveal" style="--cap: var(--c-switch)">
+          <span class="cap-dot"></span>
+          <h3>Switching</h3>
+          <p class="cap-q">Anbieter wechseln</p>
+          <p>Können wir einen Anbieter in akzeptabler Zeit und mit vertretbarem Risiko ersetzen?</p>
+        </article>
+        <article class="glass cap-card reveal" style="--cap: var(--c-int)">
+          <span class="cap-dot"></span>
+          <h3>Internalisierung</h3>
+          <p class="cap-q">Selbst betreiben</p>
+          <p>Können wir die Funktion intern aufbauen oder selbst betreiben?</p>
+        </article>
+        <article class="glass cap-card reveal" style="--cap: var(--c-ms)">
+          <span class="cap-dot"></span>
+          <h3>Multi-Sourcing</h3>
+          <p class="cap-q">Mehrere parallel</p>
+          <p>Können wir mehrere Anbieter parallel und kontrolliert nutzen?</p>
+        </article>
+        <article class="glass cap-card reveal" style="--cap: var(--c-neg)">
+          <span class="cap-dot"></span>
+          <h3>Verhandlung</h3>
+          <p class="cap-q">Konditionen gestalten</p>
+          <p>Können wir Preise, Verträge und Governance aktiv beeinflussen?</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interaktive Demo -->
+  <section class="section" id="demo">
+    <div class="container">
+      <p class="eyebrow reveal">Interaktive Demo</p>
+      <h2 class="reveal">Erlebe es selbst.</h2>
+      <p class="section-lead reveal">Beantworte vier Beispielfragen. Dein Souveränitätsprofil entsteht live als Netzdiagramm.</p>
+
+      <div class="demo-layout">
+        <div class="demo-questions reveal" id="demoQuestions">
+          <!-- Questions injected by script.js -->
+        </div>
+
+        <div class="demo-result reveal">
+          <div class="glass radar-stage demo-radar-stage">
+            <canvas id="demoRadar" aria-label="Dein Souveränitätsprofil"></canvas>
+            <span class="radar-glow"></span>
+          </div>
+          <p class="demo-interpretation" id="demoInterpretation">Beantworte die Fragen, um dein Profil zu sehen.</p>
+          <button class="btn btn-ghost btn-sm" id="demoReset">Zurücksetzen</button>
+        </div>
+      </div>
+      <p class="fineprint reveal">Beispielhafte Fragen zur Veranschaulichung. Es werden keine Daten gespeichert.</p>
+    </div>
+  </section>
+
+  <!-- So funktioniert der Survey -->
+  <section class="section" id="survey">
+    <div class="container">
+      <p class="eyebrow reveal">So funktioniert der Survey</p>
+      <h2 class="reveal">In rund 20 Minuten zum Souveränitätsprofil.</h2>
+      <div class="steps-grid">
+        <div class="glass step reveal">
+          <span class="step-num">1</span>
+          <h3>Fragen beantworten</h3>
+          <p>Pro kritischer digitaler Funktion eine kurze Selbsteinschätzung entlang der vier Fähigkeiten.</p>
+        </div>
+        <div class="glass step reveal">
+          <span class="step-num">2</span>
+          <h3>Profil erhalten</h3>
+          <p>Sofort ein Netzdiagramm der vier Capacities. Hoch, mittel oder niedrig, auf einen Blick.</p>
+        </div>
+        <div class="glass step reveal">
+          <span class="step-num">3</span>
+          <h3>Ursachen & Empfehlungen</h3>
+          <p>Jede Schwachstelle zeigt ihre Ursache und einen konkreten Hebel, den die Organisation selbst steuern kann.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wissenschaftlicher Hintergrund -->
+  <section class="section" id="wissenschaft">
+    <div class="container narrow">
+      <p class="eyebrow reveal">Wissenschaftlicher Hintergrund</p>
+      <h2 class="reveal">Auf solider Theorie gebaut.</h2>
+      <p class="section-lead reveal">Das Modell verbindet etablierte Forschungsstränge zu einem messbaren Instrument. Es ist nicht Meinung, sondern Methode.</p>
+      <ul class="theory-list">
+        <li class="glass reveal"><strong>Resource Dependence Theory</strong><span>Abhängigkeit, Alternativen und Machtbalance gegenüber Anbietern.</span></li>
+        <li class="glass reveal"><strong>Transaction Cost Economics</strong><span>Wechselkosten, Asset-Spezifität, Make-or-Buy.</span></li>
+        <li class="glass reveal"><strong>Switching Costs</strong><span>Typologie und Treiber der Wechselbarriere.</span></li>
+        <li class="glass reveal"><strong>Multi-Sourcing Governance</strong><span>Koordination und Steuerung mehrerer Anbieter.</span></li>
+      </ul>
+      <p class="fineprint reveal">Publikationen und Konferenzbeiträge in Vorbereitung.</p>
+    </div>
+  </section>
+
+  <!-- Vision / Roadmap -->
+  <section class="section" id="vision">
+    <div class="container">
+      <p class="eyebrow reveal">Vision</p>
+      <h2 class="reveal">Vom Survey zum Digital Sovereignty Monitor.</h2>
+      <p class="section-lead reveal">Drei Bausteine, die sich gegenseitig stärken. Daten fließen in Forschung, Forschung schärft Survey und Beratung.</p>
+      <div class="pillar-grid">
+        <article class="glass pillar reveal">
+          <h3>Sovereignty Survey</h3>
+          <p>Erhebung auf Organisationsebene, über Industrien und über die Zeit. Jährlicher State-of-the-Art-Report.</p>
+        </article>
+        <span class="pillar-arrow reveal" aria-hidden="true">→</span>
+        <article class="glass pillar reveal">
+          <h3>Consulting</h3>
+          <p>Vertiefte Analyse mit Partnern auf Basis echter Unternehmensdaten. Souveränitätsprofil und Stärkungspfad.</p>
+        </article>
+        <span class="pillar-arrow reveal" aria-hidden="true">→</span>
+        <article class="glass pillar reveal">
+          <h3>Scientific Deep Dive</h3>
+          <p>Daten aus Survey und Beratung fließen in Paper. Die Wissenschaft informiert beide wieder zurück.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" id="team">
+    <div class="container">
+      <p class="eyebrow reveal">Team</p>
+      <h2 class="reveal">Wer dahinter steht.</h2>
+      <div class="team-grid">
+        <article class="glass team-card reveal">
+          <span class="team-avatar">AB</span>
+          <h3>A. Bohrer</h3>
+          <p>Forschung &amp; Konzeption<!-- TODO: Titel / Affiliation ergänzen --></p>
+        </article>
+        <article class="glass team-card reveal">
+          <span class="team-avatar">AH</span>
+          <h3>A. Hein</h3>
+          <p>Forschung &amp; Konzeption<!-- TODO: Titel / Affiliation ergänzen --></p>
+        </article>
+        <article class="glass team-card reveal">
+          <span class="team-avatar">JML</span>
+          <h3>JM. Leimeister</h3>
+          <p>Leiter des Instituts</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Förderung -->
+  <section class="section" id="foerderung">
+    <div class="container narrow center">
+      <p class="eyebrow reveal">Förderung &amp; Partner</p>
+      <div class="glass funder reveal">
+        <p class="funder-label">Gefördert durch</p>
+        <div class="funder-logo" id="funderLogo">
+          <!-- TODO: Logo der Schwarz Stiftung einsetzen (Freigabe erforderlich) -->
+          Schwarz&nbsp;Stiftung
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt / CTA -->
+  <section class="section" id="kontakt">
+    <div class="container narrow center">
+      <div class="glass cta-panel reveal">
+        <h2>Souveränität gemeinsam messbar machen.</h2>
+        <p class="section-lead">Interesse am Survey, an einer Kooperation oder am Digital Sovereignty Monitor? Wir freuen uns auf den Austausch.</p>
+        <a href="mailto:adrian.bohrer@unisg.ch" class="btn btn-primary">Kontakt aufnehmen</a>
+        <p class="fineprint">adrian.bohrer@unisg.ch</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Digitale Souveränität · Forschungsprojekt</span>
+      <nav class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
